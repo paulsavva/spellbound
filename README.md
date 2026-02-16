@@ -44,7 +44,7 @@ Pure HTML/CSS. No build process. No tracking. No cookies.
 ## Website
 
 - **Domain**: [spellbound.one](https://spellbound.one)
-- **Hosting**: Cloudflare Pages / Porkbun Static Hosting
+- **Hosting**: Porkbun Static Hosting
 - **Tech**: Pure HTML/CSS
 
 ## Links
@@ -58,7 +58,3 @@ Pure HTML/CSS. No build process. No tracking. No cookies.
 When the app launches, this README will be updated with App Store links and TestFlight access.
 
 The iOS app source code will be open-sourced under MIT license after launch.
-
----
-
-Built in Cape Town · © 2025 Spellbound

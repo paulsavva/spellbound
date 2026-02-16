@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spellbound Privacy Policy">
-    <title>Privacy Policy — Spellbound</title>
+    <meta name="description" content="Spellbound Privacy Policy — We don't collect your data. Period.">
+    <title>Spellbound — Privacy Policy</title>
     <style>
         * {
             margin: 0;
@@ -18,128 +18,113 @@
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.8;
             min-height: 100vh;
-            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto;
+            flex: 1;
+            padding: 4rem 0;
         }
 
         h1 {
             font-size: 1.5rem;
             font-weight: normal;
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
             letter-spacing: 0.05em;
         }
 
+        .subtitle {
+            font-size: 0.85rem;
+            opacity: 0.4;
+            margin-bottom: 3rem;
+        }
+
         h2 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: normal;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
             opacity: 0.8;
         }
 
         p {
             font-size: 0.9rem;
+            opacity: 0.7;
             margin-bottom: 1rem;
-            opacity: 0.75;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 1px solid #fff;
-            opacity: 0.6;
-            transition: opacity 0.2s ease;
-        }
-
-        a:hover {
-            opacity: 1;
         }
 
         .back {
             display: inline-block;
             margin-bottom: 2rem;
+            color: #fff;
+            text-decoration: none;
             font-size: 0.85rem;
             opacity: 0.4;
         }
 
-        .back:before {
-            content: "← ";
+        .back:hover {
+            opacity: 0.8;
         }
 
-        ul {
-            list-style: none;
-            margin-left: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        ul li {
-            opacity: 0.75;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        ul li:before {
-            content: "— ";
-            opacity: 0.5;
-        }
-
-        .last-updated {
+        footer {
+            margin-top: auto;
+            padding-top: 4rem;
             font-size: 0.75rem;
             opacity: 0.3;
-            margin-top: 3rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back">Back</a>
-        
+        <a href="index.html" class="back">← Back</a>
+
         <h1>Privacy Policy</h1>
+        <p class="subtitle">Last updated: February 2025</p>
 
-        <p class="last-updated">Last updated: February 13, 2025</p>
+        <h2>The short version</h2>
+        <p>Spellbound doesn't collect your data. We don't know who you are, what you type, or how you use the app. That's by design.</p>
 
-        <h2>The Short Version</h2>
-        <p>We don't collect anything. Everything stays on your device.</p>
+        <h2>What we collect</h2>
+        <p>Nothing. Zero. No analytics. No crash reporting. No telemetry. No third-party SDKs. No tracking pixels. No cookies. No server logs.</p>
 
-        <h2>What We Don't Collect</h2>
-        <ul>
-            <li>Your typed words</li>
-            <li>Your corrections</li>
-            <li>Your usage patterns</li>
-            <li>Your device information</li>
-            <li>Your location</li>
-            <li>Your anything</li>
-        </ul>
+        <h2>What stays on your device</h2>
+        <p>Everything. Your typing patterns, corrections, learned words, and preferences are stored locally on your device. The 300MB FastText language model runs entirely on-device. Nothing is transmitted anywhere.</p>
 
-        <h2>What Stays On Your Device</h2>
-        <p>Spellbound stores your personal dictionary and learned patterns locally on your iPhone. This data never leaves your device unless you explicitly choose to export it.</p>
+        <h2>Peer-to-peer learning</h2>
+        <p>If you opt in to Bluetooth mesh learning, anonymized pattern data is shared directly between nearby devices. This data never passes through any server. It's device-to-device only, and it's opt-in.</p>
 
-        <h2>The 300MB Model</h2>
-        <p>The FastText language model ships with the app. It runs entirely on-device. No API calls. No internet required.</p>
+        <h2>Data export &amp; monetization</h2>
+        <p>You can export your typing patterns as an anonymized hash. If you choose to sell this data through a future marketplace, you keep 100% of the revenue. We never access, process, or intermediate this data.</p>
 
-        <h2>Peer-to-Peer Learning (Optional)</h2>
-        <p>If you enable Bluetooth mesh learning, Spellbound can share anonymized spelling patterns with nearby users via local Bluetooth. This is:</p>
-        <ul>
-            <li>Opt-in only</li>
-            <li>Anonymous (no user IDs)</li>
-            <li>Local (device-to-device, no server)</li>
-            <li>Can be disabled anytime</li>
-        </ul>
+        <h2>Third parties</h2>
+        <p>There are none. No advertising networks. No analytics providers. No cloud services. No APIs. The app doesn't make network requests.</p>
 
-        <h2>Data Export</h2>
-        <p>You can export a hash of your typing patterns. This hash is yours to keep, share, or sell. Spellbound takes no commission and has no access to where you send it.</p>
+        <h2>Children's privacy</h2>
+        <p>Since we collect no data from anyone, we collect no data from children either.</p>
 
-        <h2>No Analytics</h2>
-        <p>This app contains no analytics, no crash reporting, no tracking pixels, and no third-party SDKs beyond the core iOS frameworks.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>If we ever change this policy (unlikely), we'll update this page and the app. But our core principle won't change: your words are yours.</p>
+        <h2>Changes to this policy</h2>
+        <p>If this policy ever changes, it will only become more private, never less. Any changes will be posted here.</p>
 
         <h2>Contact</h2>
-        <p>Questions? Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f9898b908f989a80b98a899c95959b968c979dd796979c">[email&#160;protected]</a></p>
+        <p>Questions? Reach out at paul@spellbound.one</p>
+    </div>
 
-        <p class="last-updated">In 
+    <footer>
+        <p><a href="index.html">Home</a> · <a href="https://github.com/paulsavva/spellbound" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>
