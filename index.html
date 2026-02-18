@@ -35,8 +35,22 @@
         h1 {
             font-size: 2rem;
             font-weight: normal;
-            margin-bottom: 3rem;
+            margin-bottom: 0.5rem;
             letter-spacing: 0.05em;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background: #fff;
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+            margin-left: 4px;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
         }
 
         .tagline {
@@ -48,7 +62,7 @@
 
         .description {
             font-size: 0.95rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             opacity: 0.85;
         }
 
@@ -56,82 +70,10 @@
             margin-bottom: 1rem;
         }
 
-        .cta {
-            margin: 3rem 0;
-        }
-
-        .waitlist-form {
-            display: flex;
-            gap: 0;
-            max-width: 400px;
-        }
-
-        .waitlist-form input[type="email"] {
-            flex: 1;
-            padding: 12px 16px;
-            background: transparent;
-            border: 1px solid #fff;
-            border-right: none;
-            color: #fff;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        .waitlist-form input[type="email"]::placeholder {
-            color: #fff;
-            opacity: 0.3;
-        }
-
-        .waitlist-form button {
-            padding: 12px 24px;
-            background: transparent;
-            border: 1px solid #fff;
-            color: #fff;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            letter-spacing: 0.05em;
-        }
-
-        .waitlist-form button:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        .waitlist-note {
-            font-size: 0.75rem;
-            opacity: 0.3;
-            margin-top: 0.75rem;
-        }
-
-        .app-store-badge {
-            display: inline-block;
-            padding: 12px 24px;
-            border: 1px solid #fff;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-            letter-spacing: 0.05em;
-        }
-
-        .app-store-badge:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        .app-store-badge.coming-soon {
-            opacity: 0.3;
-            cursor: default;
-            pointer-events: none;
-        }
-
         .features {
             font-size: 0.85rem;
             opacity: 0.5;
-            margin-top: 2rem;
+            margin-bottom: 3rem;
         }
 
         .features ul {
@@ -147,6 +89,26 @@
             opacity: 0.5;
         }
 
+        .cta {
+            margin: 2rem 0 3rem;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
         footer {
             margin-top: auto;
             padding-top: 4rem;
@@ -158,87 +120,40 @@
         footer a {
             color: #fff;
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
         }
 
         footer a:hover {
-            border-bottom-color: #fff;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5rem;
-                margin-bottom: 2rem;
-            }
-
-            .tagline {
-                font-size: 0.9rem;
-                margin-bottom: 2rem;
-            }
-
-            .description {
-                font-size: 0.85rem;
-            }
-
-            .waitlist-form {
-                flex-direction: column;
-                max-width: 100%;
-            }
-
-            .waitlist-form input[type="email"] {
-                border-right: 1px solid #fff;
-            }
-        }
-
-        /* Cursor blink effect */
-        .blink {
-            animation: blink 1.2s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Spellbound<span class="blink">_</span></h1>
-            <p class="tagline">It knows your words. Not you.</p>
-        </header>
+        <h1>Spellbound<span class="cursor"></span></h1>
+        <p class="tagline">It knows your words. Not you.</p>
 
-        <main>
-            <div class="description">
-                <p>A spell-checker that learns from you.</p>
-                <p>No cloud. No tracking. No server.<br>
-                Just your words. On your device.</p>
-            </div>
+        <div class="description">
+            <p>A spell-checker that learns from you. On your device. Never leaves your phone.</p>
+            <p>No cloud. No tracking. No server. No third-party SDKs. No analytics. Nothing.</p>
+        </div>
 
-            <div class="cta">
-                <form class="waitlist-form" action="https://buttondown.email/api/emails/embed-subscribe/spellbound" method="post" target="_blank">
-                    <input type="email" name="email" placeholder="your@email.com" required>
-                    <button type="submit">Join Waitlist</button>
-                </form>
-                <p class="waitlist-note">Early access. No spam. Unsubscribe anytime.</p>
-            </div>
+        <div class="features">
+            <ul>
+                <li>300MB FastText model, runs entirely on-device</li>
+                <li>Learns your corrections locally, forgets what you ignore</li>
+                <li>Optional peer-to-peer learning via Bluetooth (anonymous)</li>
+                <li>Export your typing patterns as a hash. Sell it. Keep 100%.</li>
+            </ul>
+        </div>
 
-            <div class="features">
-                <ul>
-                    <li>300MB FastText model, offline</li>
-                    <li>Learns from your corrections</li>
-                    <li>Zero data leaves your phone</li>
-                    <li>Optional peer-to-peer learning via Bluetooth</li>
-                    <li>Export your typing pattern. Sell it. Keep 100%.</li>
-                </ul>
-            </div>
-        </main>
+        <div class="cta">
+            <span class="coming-soon">Coming Soon to iOS</span>
+        </div>
     </div>
 
     <footer>
         <p><a href="privacy.html">Privacy Policy</a> · <a href="https://github.com/paulsavva/spellbound" target="_blank">GitHub</a> · <a href="https://twitter.com/PaulSavva" target="_blank">@PaulSavva</a></p>
-        <p style="margin-top: 0.5rem;">Built in Cape Town · © 2025 Spellbound</p>
+        <p style="margin-top: 0.5rem;">Cape Town, South Africa</p>
     </footer>
 </body>
 </html>
